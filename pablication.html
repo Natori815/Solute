@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Natori's 実験広場 & 図書館</title>
+    <style>
+        body { 
+            background-color: #f0f2f5; 
+            font-family: 'Helvetica Neue', Arial, sans-serif; 
+            margin: 0; 
+            padding: 0;
+            color: #2f3542;
+        }
+
+        header {
+            background-color: #ffffff;
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+        }
+
+        h1 { margin: 0; font-size: 32px; color: #333; }
+        .subtitle { color: #888; margin-top: 10px; }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px 80px 20px;
+        }
+
+        section {
+            margin-bottom: 60px;
+        }
+
+        h2 {
+            border-left: 5px solid #007bff;
+            padding-left: 15px;
+            margin-bottom: 30px;
+            font-size: 24px;
+        }
+
+        /* カードデザイン */
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #007bff;
+        }
+
+        .card-desc {
+            font-size: 15px;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+
+        /* 図書館（工事中）のスタイル */
+        .library-section {
+            opacity: 0.8;
+        }
+
+        .construction-box {
+            background: #e9ecef;
+            border: 2px dashed #ced4da;
+            padding: 40px;
+            border-radius: 12px;
+            text-align: center;
+            color: #adb5bd;
+        }
+
+        .construction-icon {
+            font-size: 40px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: #888;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>成果公表ポータル</h1>
+    <div class="subtitle">Research & Simulation</div>
+</header>
+
+<div class="container">
+
+    <section>
+        <h2>実験広場 (Simulations)</h2>
+        <a href="https://natori815.github.io/binomial-distribution-simulation/" class="card">
+            <div class="card-title">二項分布シミュレーション</div>
+            <p class="card-desc">
+                パスカルの三角形と三角錐を用いて、確率の広がりを視覚化します。
+                玉の動きを見ながら統計的な分布を学べるインタラクティブなツールです。
+            </p>
+        </a>
+    </section>
+
+    <section class="library-section">
+        <h2>図書館 (Documents)</h2>
+        <div class="construction-box">
+            <span class="construction-icon">🚧</span>
+            <p>PDF資料は現在準備中です（工事中）</p>
+            <p style="font-size: 13px;">論文や解説レポートを今後公開していく予定です。</p>
+        </div>
+    </section>
+
+</div>
+
+<footer>
+    &copy; 2026 
+</footer>
+
+</body>
+</html>
