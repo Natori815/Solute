@@ -50,20 +50,38 @@
             animation: fade-in-bg 1.5s 1s forwards;
         }
 
+        /* --- 修正部分：ここから --- */
         .hero-title {
             font-size: 84px;
             font-weight: bold;
-            letter-spacing: 0.3em;
             color: #ffffff;
             z-index: 10;
             position: relative;
-            animation: title-initial 0.8s ease-out forwards;
+            
+            /* 最初は完全に消しておく */
+            opacity: 0; 
+            
+            /* 玉が拡大を始める 0.9秒後 に、1.2秒かけて横に広がるアニメーションを再生 */
+            animation: title-expand 1.2s 0.9s cubic-bezier(0.19, 1, 0.22, 1) forwards;
         }
 
-        @keyframes title-initial {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
+        /* 古い @keyframes title-initial は消して、これに差し替えます */
+        @keyframes title-expand {
+            0% { 
+                opacity: 0; 
+                letter-spacing: -0.5em; /* 最初は文字をギュッと中央に詰める */
+                filter: blur(10px);     /* 少しぼかしを入れると爆発感が出ます */
+            }
+            30% { 
+                opacity: 1; 
+                filter: blur(0px); 
+            }
+            100% { 
+                opacity: 1; 
+                letter-spacing: 0.3em;  /* 最終的に指定の文字間隔まで横に広がる */
+            }
         }
+        /* --- 修正部分：ここまで --- */
 
         .drop-circle {
             position: absolute;
