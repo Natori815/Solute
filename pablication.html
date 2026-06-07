@@ -262,6 +262,89 @@
                 padding: 40px 20px;
             }
         }
+        /* 研究所紹介＆メルマガの追加スタイル */
+        .intro-card {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+            margin-bottom: 30px;
+        }
+        .intro-paragraph {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #4b5563;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        .intro-paragraph:last-child {
+            margin-bottom: 0;
+        }
+        .newsletter-box {
+            background: linear-gradient(135deg, #001b44 0%, #002d72 100%);
+            color: #ffffff;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 27, 68, 0.15);
+            margin-top: 35px;
+        }
+        .newsletter-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            letter-spacing: 0.05em;
+        }
+        .newsletter-desc {
+            font-size: 14px;
+            color: #9ab4db;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        .newsletter-form {
+            display: flex;
+            gap: 10px;
+        }
+        .newsletter-input {
+            flex: 1;
+            padding: 12px 15px;
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 6px;
+            font-size: 15px;
+            background: rgba(255,255,255,0.1);
+            color: #ffffff;
+        }
+        .newsletter-input::placeholder {
+            color: #9ab4db;
+        }
+        .newsletter-input:focus {
+            outline: none;
+            background: rgba(255,255,255,0.2);
+            border-color: #ffffff;
+        }
+        .newsletter-btn {
+            padding: 12px 30px;
+            background: #ffffff;
+            color: #001b44;
+            border: none;
+            border-radius: 6px;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .newsletter-btn:hover {
+            background: #9ab4db;
+            color: #001b44;
+        }
+        @media (max-width: 600px) {
+            .newsletter-form {
+                flex-direction: column;
+            }
+        }
+        .newsletter-box {
+            font-family: "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", "MS Mincho", serif;
+            /* （これまでの設定が続く） */
+        }
     </style>
 </head>
 <body>
@@ -281,32 +364,50 @@
 
 <div class="container">
 
-    <section>
-        </section>
+<section class="intro-section">
+        <h2>研究所について</h2>
+        <div class="intro-card">
+            <p class="intro-paragraph">
+                初等数学研は、高校数学や初等整数論、初等幾何学といった「誰もが一度は触れたことのある数学」を起点に、現代数学の深淵へと迫る研究・学習拠点です。
+            </p>
+            <p class="intro-paragraph">
+                一見シンプルに見える問題の背後に隠された美しい数理構造を解き明かし、インタラクティブな数理実験広場を通して、誰もが数学のダイナミズムを視覚的・直感的に体験できる環境を構築しています。
+            </p>
+            <p class="intro-paragraph">
+                代表者は「なとり(偽名)」で、他のメンバーを含めると現在3名が研究室のメンバーとなっています。
+            </p>
+        </div>
+
+        <div class="newsletter-box">
+            <div class="newsletter-title">数理メルマガ「Solute Math Letters」</div>
+            <p class="newsletter-desc">
+                研究室の最新コラムや、未解決問題へのアプローチ、新しいシミュレーションの公開情報を不定期でお届けします（購読無料）。
+            </p>
+            <form class="newsletter-form" onsubmit="alert('登録機能は現在準備中です。'); return false;">
+                <input type="email" class="newsletter-input" placeholder="メールアドレスを入力" required>
+                <button type="submit" class="newsletter-btn">購読する</button>
+            </form>
+        </div>
+    </section>
 
     <section>
         <h2>最新の活動</h2>
         <div class="blog-container">
             
-            <a href="blog-post4.html" class="blog-card">
+            <a href="blog1.html" class="blog-card">
                 <div class="blog-meta">2026.06.07</div>
-                <div class="blog-title">ここに最新の記事タイトルが入ります（4件目）</div>
+                <div class="blog-title">【開設】はじめまして 初等数学研究室と申します</div>
             </a>
 
-            <a href="blog-post3.html" class="blog-card">
-                <div class="blog-meta">2026.06.01</div>
-                <div class="blog-title">ここに記事タイトルが入ります（3件目）</div>
-            </a>
+            <div class="blog-card" style="opacity: 0.5; cursor: default;">
+                <div class="blog-meta">2026.xx.xx</div>
+                <div class="blog-title">次回記事 準備中</div>
+            </div>
 
-            <a href="blog-post2.html" class="blog-card">
-                <div class="blog-meta">2026.05.24</div>
-                <div class="blog-title">ここに記事タイトルが入ります（2件目）</div>
-            </a>
-
-            <a href="blog-post1.html" class="blog-card">
-                <div class="blog-meta">2026.05.15</div>
-                <div class="blog-title">ここに記事タイトルが入ります（1件目）</div>
-            </a>
+            <div class="blog-card" style="opacity: 0.5; cursor: default;">
+                <div class="blog-meta">2026.xx.xx</div>
+                <div class="blog-title">次回記事 準備中</div>
+            </div>
 
             <a href="blog.html" class="blog-more-btn">過去の記事一覧へ</a>
         </div>

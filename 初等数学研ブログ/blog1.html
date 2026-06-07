@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>【開設】はじめまして 初等数学研究室と申します</title>
+    <link rel="icon" href="sm_logotoka.png" type="image/png">
+    <style>
+        body { 
+            background-color: #f0f2f5; 
+            /* 本文やブログタイトルに合わせた洗練されたゴシック体 */
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif; 
+            margin: 0; 
+            padding: 0;
+            color: #2f3542;
+        }
+
+        header {
+            background-color: #ffffff;
+            padding: 40px 20px;
+            position: relative;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+        }
+
+        /* トップページ（pablication.html）へ戻るボタン */
+        .back-to-home-btn {
+            position: absolute;
+            left: 40px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: inline-flex;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: transparent;
+            color: #001b44;
+            border: 1px solid #001b44;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+            transition: all 0.3s ease;
+        }
+
+        .back-to-home-btn:hover {
+            background-color: #001b44;
+            color: #ffffff;
+        }
+
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .header-text-group {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: left;
+        }
+
+        .header-logo {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            display: block;
+        }
+
+        header h1 { 
+            margin: 0; 
+            font-size: 36px; 
+            color: #333; 
+            font-weight: bold;
+            line-height: 1.2;
+        }
+        
+        .subtitle { 
+            color: #888; 
+            margin-top: 5px; 
+            margin-bottom: 0;
+            font-size: 16px;
+        }
+
+        /* ブログ記事用のレイアウト */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px 60px 20px;
+        }
+
+        .blog-article {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+        }
+
+        .blog-meta {
+            font-size: 14px;
+            color: #999;
+            margin-bottom: 10px;
+        }
+
+        .blog-main-title {
+            font-size: 28px;
+            font-weight: bold;
+            color: #2f3542;
+            margin-top: 0;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+
+        .blog-author {
+            font-size: 15px;
+            color: #57606f;
+            border-bottom: 1px solid #e4e7ed;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        /* 記事内の見出し（H2, H3）スタイル */
+        .blog-article h2 {
+            font-size: 22px;
+            color: #001b44;
+            border-left: 5px solid #007bff;
+            padding-left: 15px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+
+        .blog-article h3 {
+            font-size: 18px;
+            color: #2f3542;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            position: relative;
+            padding-left: 12px;
+        }
+        .blog-article h3::before {
+            content: "■";
+            color: #007bff;
+            font-size: 12px;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .blog-article p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #2f3542;
+            margin-top: 0;
+            margin-bottom: 18px;
+            text-align: justify;
+        }
+
+        /* リストのスタイル */
+        .blog-article ul {
+            margin-top: 0;
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+
+        .blog-article li {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #2f3542;
+            margin-bottom: 8px;
+        }
+
+        /* フッターに戻るリンク */
+        .bottom-nav {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .bottom-back-link {
+            display: inline-block;
+            color: #001b44;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: bold;
+            border-bottom: 1px solid #001b44;
+            transition: opacity 0.3s ease;
+        }
+        .bottom-back-link:hover {
+            opacity: 0.6;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: #888;
+            font-size: 14px;
+        }
+
+        /* レスポンシブ表示対応 */
+        @media (max-width: 768px) {
+            header {
+                padding-top: 80px;
+            }
+            .back-to-home-btn {
+                top: 25px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            .blog-article {
+                padding: 25px;
+            }
+            .blog-main-title {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="pablication.html" class="back-to-home-btn">← 案内ページへ</a>
+
+    <div class="header-container">
+        <img src="sm_logotoka.png" alt="初等数学研究所 ロゴ" class="header-logo">
+        
+        <div class="header-text-group">
+            <h1>初等数学研究所</h1>
+            <div class="subtitle">Research & Simulation</div>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+
+    <article class="blog-article">
+        <div class="blog-meta">2026.06.07</div>
+        <h1 class="blog-main-title">はじめまして 初等数学研究室と申します</h1>
+        <div class="blog-author">著者：なとり</div>
+
+        <h2>1. このブログについて</h2>
+        <p>私は代表の「なとり」ともうします。一応本名、年齢などは伏せておくのですがバレるときは来ると思います。</p>
+        <p>早速こんなヘンピなサイトに来ていただきありがとうございます。このブログでは以下のようなことをしようと思っています。</p>
+        
+        <ul>
+            <li>新しいシミュレーションの開発報告</li>
+            <li>資料作成の報告</li>
+            <li>興味深い問題を知ったとき</li>
+            <li>その他 メンバーが各々書きます</li>
+        </ul>
+
+        <p>ということで今回のブログでは「初等数学研のサイトを作りました」という開発報告に当たりますね。</p>
+        <p>では、研究室のサイトの使い方について書いていこうと思いMATH!!!!!</p>
+
+        <h2>2. サイトの使い方</h2>
+        <p>上から順に以下のコンテンツを配置しています。</p>
+        <ul>
+            <li>案内（流石に使い方とか言わなくてもいいよね？）</li>
+            <li>数理メルマガ「Solute Math Letters」</li>
+            <li>実験広場</li>
+            <li>資料室</li>
+        </ul>
+
+        <h3>2.1 Solute Math Letters とは</h3>
+        <p>これはこのブログとやってることは変わらないです。</p>
+        <p>e-mailでブログのURLを貼るだけです。（基本は）</p>
+        <p>このブログも不定期的に更新していくのですが、Solute Math Lettersはもっと不定期的に更新していこうと思っています。</p>
+        <p>そんな気にしなくていいです。無料なんで。</p>
+
+        <h3>2.2 実験広場 とは</h3>
+        <p>現在は「二項分布シミュレーション」というのがありますね。</p>
+        <p>一応使い方を説明しておくと、段数を指定してその段数のパスカルの三角形、パスカルの四面体が描画されます。スタートを押すと玉が落ちてきて底についたときに数がカウントされます。その後、理論値が赤線で、実験値が棒で表されます。これによって「本当に二項分布はパスカルの三角形に関連しているのか？」というのが分かります。</p>
+
+        <h3>2.3 資料室とは</h3>
+        <p>初等数学研内で作成した論文、講義ノートなどをアップロードしていくつもりです。現在「初等整数論講義ノート」、「IMOへの挑戦」と「何かの探求」を準備中です。</p>
+        <p>気軽にpdfをダウンロードしちゃってください！！</p>
+
+        <p style="margin-top: 40px;">ではコノヘンで今回は終了です。</p>
+        <p>それでは   (*￣▽￣)ﾉ~~ ﾏﾀﾈｰ♪</p>
+    </article>
+
+    <div class="bottom-nav">
+        <a href="pablication.html" class="bottom-back-link">← 案内ページへ戻る</a>
+    </div>
+
+</div>
+
+<footer>
+    &copy; 2026 初等数学研究所
+</footer>
+
+</body>
+</html>
