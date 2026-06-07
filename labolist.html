@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>研究室案内 | Solute数理解析研究所</title> <link rel="icon" href="Solute.png" type="image/png">
+    <style>
+        body { 
+            background-color: #f7f9fa; 
+            font-family: "Yu Mincho", "YuMincho", "MS Mincho", serif; 
+            margin: 0; 
+            padding: 0;
+            color: #001b44;
+            line-height: 1.8;
+        }
+
+        header {
+            background-color: #001b44;
+            padding: 60px 20px;
+            text-align: center;
+            color: #ffffff;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        h1 { 
+            margin: 0; 
+            font-size: 32px; 
+            letter-spacing: 0.1em;
+            font-weight: normal;
+        }
+        
+        .subtitle { 
+            color: #9ab4db; 
+            margin-top: 10px; 
+            font-size: 14px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 60px 20px 100px 20px;
+        }
+
+        .intro-section {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        .intro-text {
+            font-size: 16px;
+            color: #555;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .lab-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .lab-card {
+            background: #ffffff;
+            border-radius: 0px;
+            border: 1px solid #e0e6ed;
+            padding: 35px 25px;
+            text-align: center;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0 4px 20px rgba(0, 27, 68, 0.03);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+
+        .lab-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 27, 68, 0.08);
+            border-color: #001b44;
+        }
+
+        .lab-logo {
+            width: 90px;
+            height: 90px;
+            object-fit: contain;
+            margin-bottom: 25px;
+        }
+
+        .lab-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #001b44;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .lab-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 1px;
+            background-color: #001b44;
+        }
+
+        .lab-desc {
+            font-size: 14px;
+            color: #666;
+            text-align: justify;
+            margin: 0;
+        }
+
+        .lab-card.under-construction {
+            background: #fafbfc;
+            border: 1px dashed #ced4da;
+            cursor: default;
+        }
+        .lab-card.under-construction:hover {
+            transform: none;
+            box-shadow: 0 4px 20px rgba(0, 27, 68, 0.03);
+            border-color: #ced4da;
+        }
+        .construction-icon {
+            font-size: 36px;
+            color: #ced4da;
+            margin-bottom: 20px;
+            line-height: 90px;
+            height: 90px;
+        }
+        .construction-title {
+            color: #adb5bd;
+        }
+
+        .back-to-top {
+            display: inline-block;
+            margin-top: 60px;
+            color: #001b44;
+            text-decoration: none;
+            font-size: 14px;
+            border-bottom: 1px solid #001b44;
+            transition: opacity 0.3s ease;
+        }
+        .back-to-top:hover {
+            opacity: 0.6;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: #888;
+            font-size: 12px;
+            background-color: #ffffff;
+            border-top: 1px solid #e0e6ed;
+        }
+
+        @media (max-width: 768px) {
+            .lab-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>研究室案内</h1> <div class="subtitle">Research Labs & Departments</div> </header>
+
+<div class="container">
+
+    <div class="intro-section">
+        <p class="intro-text">
+            Solute数理解析研究所が擁する、各専門分野の研究室・部門一覧です。<br>
+            それぞれの領域において、基礎理論の探求から数理シミュレーションを用いた社会還元まで、独自の活動を展開しています。
+        </p>
+    </div>
+
+    <div class="lab-grid">
+        
+        <a href="pablication.html" class="lab-card">
+            <img src="sm_logotoka.png" alt="初等数学研究所 ロゴ" class="lab-logo">
+            <div class="lab-title">初等数学研究室</div>
+            <p class="lab-desc">
+                初等数学の枠組みを通して現代数学の深淵に迫る研究拠点。「初等整数論講義ノート」の公開や、国際数学オリンピック（IMO）の難問ハック、数理視覚化シミュレーションの開発などを行っています。
+            </p>
+        </a>
+
+        <div class="lab-card under-construction">
+            <div class="construction-icon">🚧</div>
+            <div class="lab-title construction-title">新規研究室（仮）</div> <p class="lab-desc" style="color: #adb5bd; text-align: center;">
+                新しい研究室を準備中です。<br>開設まで今しばらくお待ちください。
+            </p>
+        </div>
+
+        <div class="lab-card under-construction">
+            <div class="construction-icon">🚧</div>
+            <div class="lab-title construction-title">新規研究室（仮）</div> <p class="lab-desc" style="color: #adb5bd; text-align: center;">
+                新しい研究室を準備中です。<br>開設まで今しばらくお待ちください。
+            </p>
+        </div>
+
+    </div>
+
+    <div style="text-align: center;">
+        <a href="index.html" class="back-to-top">← 研究所トップページへ戻る</a>
+    </div>
+
+</div>
+
+<footer>
+    &copy; 2026 Solute数理解析研究所
+</footer>
+
+</body>
+</html>
